@@ -105,7 +105,9 @@ export function SectionTwo() {
               <Image src={item.icon} alt="Icon" className="w-16 h-16" />
               <h1 className="text-2xl font-medium pt-3">{item.name}</h1>
               <p className="text-muted-foreground">{item.username}</p>
-              <Button></Button>
+              <Button>
+                <a href={item.link}>Follow</a>
+              </Button>
             </Card>
           ))}
         </div>
