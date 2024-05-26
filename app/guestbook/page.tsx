@@ -7,9 +7,14 @@ import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import React, { Suspense } from "react";
 import prisma from "../lib/db";
-import { GuestBookFormLOading, LoadingMessages } from "@/components/LoadingState";
+import {
+  GuestBookFormLOading,
+  LoadingMessages,
+} from "@/components/LoadingState";
+import { unstable_noStore as noStore } from "next/cache";
 
 async function getGuestBookEntry() {
+  noStore();
   const data = await prisma.guestBookEntry.findMany({
     select: {
       User: {
@@ -39,7 +44,7 @@ export default function GuestBookPage() {
       <Card className="mt-10">
         <CardHeader className="flex flex-col w-full">
           <Label className="mb-1">Message</Label>
-          <Suspense fallback={<GuestBookFormLOading/>}>
+          <Suspense fallback={<GuestBookFormLOading />}>
             <GuestBookForm />
           </Suspense>
 
