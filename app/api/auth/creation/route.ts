@@ -32,5 +32,5 @@ export async function GET(){
         })
     }
 
-    return NextResponse.redirect("http://localhost:3000/guestbook");
+    return NextResponse.redirect("https://portfolio-first-eta.vercel.app/guestbook");
 }
