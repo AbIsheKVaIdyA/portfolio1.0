@@ -12,14 +12,29 @@ export async function postData(formData: FormData) {
     throw new Error("Unauthorized");
   }
 
-  const message = formData.get("message") as string;
+  // Ensure the user exists in your DB
+  let dbUser = await prisma.user.findUnique({
+    where: { id: user.id },
+  });
 
-  const data = await prisma.guestBookEntry.create({
+  if (!dbUser) {
+    dbUser = await prisma.user.create({
+      data: {
+        id: user.id,
+        email: user.email ?? "",
+        firstname: user.given_name ?? "",
+        lastName: user.family_name ?? "",
+      },
+    });
+  }
+
+  // Now safely create guestbook entry
+  await prisma.guestBookEntry.create({
     data: {
-      userId: user.id,
-      message: message,
+      userId: dbUser.id,
+      message: formData.get("message") as string,
     },
   });
 
-  revalidatePath("/guestbook")
+  revalidatePath("/guestbook");
 }
