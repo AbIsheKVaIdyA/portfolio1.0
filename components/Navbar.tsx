@@ -18,6 +18,10 @@ export const navigationItems = [
     href: "/",
   },
   {
+    name: "Experience",
+    href: "/experience",
+  },
+  {
     name: "Guestbook",
     href: "/guestbook",
   },

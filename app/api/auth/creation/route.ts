@@ -24,7 +24,7 @@ export async function GET(){
             data: {
                 id:user.id,
                 firstname:user.given_name??"",
-                lastname:user.family_name??"",
+                lastName:user.family_name??"",
                 email:user.email??"",
                 profileimage:user.picture,
 

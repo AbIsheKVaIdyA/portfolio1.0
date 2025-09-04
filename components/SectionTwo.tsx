@@ -7,68 +7,70 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-
-import sketch from "../public/tech-icons/sketch.svg";
-import canva from "../public/tech-icons/canva.svg";
-import ai from "../public/tech-icons/ai.svg";
-import figma from "../public/tech-icons/figma.svg";
-import chatgpt from "../public/tech-icons/chatgpt.svg";
-import cloud from "../public/tech-icons/creativecloud.svg";
-import framer from "../public/tech-icons/framer.svg";
 import github from "../public/tech-icons/github.svg";
-import slack from "../public/tech-icons/slack.svg";
-import discord from "../public/tech-icons/discord.svg";
-import youtube from "../public/tech-icons/youtube.svg";
-import chrome from "../public/tech-icons/chrome.svg";
-import pr from "../public/tech-icons/pr.svg";
-import ps from "../public/tech-icons/ps.svg";
-import notion from "../public/tech-icons/notion.svg";
-import micro from "../public/tech-icons/micro.svg";
-import twitter from "../public/twitter.svg";
-import insta from "../public/insta.svg";
+import nextjs from "../public/tech-icons/nextjs.svg";
 import linkedin from "../public/linkedin.svg";
+import react from "../public/tech-icons/react.svg";
+import tailwind from "../public/tech-icons/tailwind.svg";
+import nodejs from "../public/tech-icons/nodejs.svg";
+import python from "../public/tech-icons/python.svg";
+import java from "../public/tech-icons/java.svg";
+import javascript from "../public/tech-icons/javascript.png";
+import firebase from "../public/tech-icons/firebase.svg";
+import git from "../public/tech-icons/git.svg";
+import sql from "../public/tech-icons/sql.png";
+import googlecloud from "../public/tech-icons/googlecloud.svg";
+import expo from "../public/tech-icons/expo.svg";
+import clerk from "../public/tech-icons/clerk.svg";
+import aws from "../public/tech-icons/aws.svg"; 
+import mongodb from "../public/tech-icons/mongodb.svg";
+import typesecript from "../public/tech-icons/typescript.svg";
+import sanity from "../public/tech-icons/sanity.svg";
+import shadcnui from "../public/tech-icons/shadcnui.svg";
 import { Button } from "@/components/ui/button";
 
 const icons = [
-  sketch,
-  canva,
-  ai,
-  figma,
-  chatgpt,
-  cloud,
-  framer,
-  github,
-  slack,
-  discord,
-  youtube,
-  chrome,
-  pr,
-  ps,
-  notion,
-  micro,
+  nextjs,
+  tailwind,
+  nodejs,
+  python,
+  react,
+  java,
+  javascript,
+  firebase,
+  git,
+  sql,
+  googlecloud,
+  expo,
+  clerk,
+  aws,
+  mongodb,
+  typesecript,
+  sanity,
+  shadcnui
 ];
 
 const socialMedia = [
   {
     id: 1,
-    icon: insta,
-    name: "Instagram",
-    username: "@jan",
-    link: "http://localhost:3000/",
+    icon: github,
+    name: "Resume",
+    username:"Abhishek Vaidya",
+    link: "https://docs.google.com/document/d/1Q2JqCAYoODDL6WgWIi1uPm79zX0kmrjKePugLsm-Tpw/edit?usp=sharing",
   },
   {
     id: 2,
-    icon: twitter,
-    name: "X / Twitter",
-    username: "@jan",
-    link: "http://localhost:3000/",
+    icon: github,
+    name: "GitHub",
+    username: "@AbIsheKVaIdyA",
+    link: "https://github.com/AbIsheKVaIdyA",
   },
   {
     id: 3,
     icon: linkedin,
     name: "Linkedin",
-    username: "@jan",
-    link: "http://localhost:3000/",
+    username: "@Abhishek Vaidya",
+    link: "https://www.linkedin.com/in/abhishek-vaidya-73075424a/",
   },
 ];
 
@@ -106,7 +108,7 @@ export function SectionTwo() {
               <h1 className="text-2xl font-medium pt-3">{item.name}</h1>
               <p className="text-muted-foreground">{item.username}</p>
               <Button>
-                <a href={item.link}>Follow</a>
+                <a href={item.link}>Hack Into Me</a>
               </Button>
             </Card>
           ))}
